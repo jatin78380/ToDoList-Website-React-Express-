@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import './App.css'
-import Home from './Home'
-import SignUp from './SignUp'
-import Login from './Login'
-import TodoList  from './todo'
+import Home from './components/Home'
+import SignUp from './components/SignUp'
+import Login from './components/Login'
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+import { CreateTodo } from './components/CreateTodo'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +12,7 @@ function App() {
     {path:"/",element:<Home/>},
     {path:"/signup",element:  <SignUp/>},
     {path:"/login",element:<Login/>},
-    {path:"/todo",element:<TodoList/>}
+    {path:"/todo",element:<CreateTodo/>}
   ])
 
   return (
